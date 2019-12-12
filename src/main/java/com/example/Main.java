@@ -38,11 +38,11 @@ import java.util.Map;
 @SpringBootApplication
 public class Main {
 
-  @Value("${spring.datasource.url}")
-  private String dbUrl;
+ /* @Value("${spring.datasource.url}")
+  private String dbUrl;*/
 
-  @Autowired
-  private DataSource dataSource;
+ /* @Autowired
+  private DataSource dataSource;*/
 
   public static void main(String[] args) throws Exception {
     SpringApplication.run(Main.class, args);
@@ -53,7 +53,7 @@ public class Main {
     return "index";
   }
 
-  @RequestMapping("/db")
+ /* @RequestMapping("/db")
   String db(Map<String, Object> model) {
     try (Connection connection = dataSource.getConnection()) {
       Statement stmt = connection.createStatement();
@@ -72,9 +72,9 @@ public class Main {
       model.put("message", e.getMessage());
       return "error";
     }
-  }
+  }*/
 
-  @Bean
+ /* @Bean
   public DataSource dataSource() throws SQLException {
     if (dbUrl == null || dbUrl.isEmpty()) {
       return new HikariDataSource();
@@ -83,6 +83,6 @@ public class Main {
       config.setJdbcUrl(dbUrl);
       return new HikariDataSource(config);
     }
-  }
+  }*/
 
 }

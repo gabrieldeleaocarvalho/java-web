@@ -1,1 +1,5 @@
 GET http://localhost:5000/produtos/ HTTP/1.1 
+###
+GET http://localhost:5000/produtos/?raca=cao HTTP/1.1 
+###
+GET http://localhost:5000/produtos/?raca=gato HTTP/1.1 
